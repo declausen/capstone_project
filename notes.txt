@@ -1,0 +1,15 @@
+From salmank09 artistrecommender Readme
+- used collaborative filtering, pyspark, mlllib and ALS
+- trained his model on an Elastic Map Reduce cluster hosted on Amazon Web Services
+- "Although I did not take this approach, a potentially better approach of developing the model would be to minimize the error between the values corresponding to a user's top n recommended artists, and the actual values for those artists for that user, for each user. This could be considered a better approach because we are only evaluating the effectiveness of our approximation on recommendations that we care about, i.e. the ones the user sees."
+- "precomputed the cosine similarities for each artist relative to the rest of the artists on their feature vectors. Given this matrix, I take the queried artist and return the n most similar artists to that artist by their cosine similarity scores, 1 being very similar, 0 being not similar at all"
+
+From Scrum
+- look into side-loading
+
+Online Research
+- Similarities:
+    *Jaccard - typically used where we don’t have a numeric rating but just a boolean value like a product being bought or an add being clicked (or Tanimoto Coefficient)(AB / ( A + B - AB))
+    *Cosine - maybe use clicked books as a different rating, and recommended but not clicked as another rating
+    Pearson
+- Graphlab Create library
