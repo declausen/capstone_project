@@ -13,3 +13,12 @@ Online Research
     *Cosine - maybe use clicked books as a different rating, and recommended but not clicked as another rating
     Pearson
 - Graphlab Create library
+
+DATA
+- total data points: 29,591,800
+    + total 'succes_page' data points: 29,427,335
+    + total 'individual_email' data points: 164,465
+- total claimed: 2,808,850                  percent: 9.492%
+- total clicked: 3,106,707                  percent: 10.499%
+- total clicked but not claimed: 297,857    percent: 1.007%
+- total optin: 1,585,696                    percent: 5.359%
