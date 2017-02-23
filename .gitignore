@@ -90,3 +90,4 @@ ENV/
 
 # Unnecessary Project files
 project/
+data/

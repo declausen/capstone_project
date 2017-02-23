@@ -10,11 +10,21 @@ From Scrum
 Online Research
 - Similarities:
     *Jaccard - typically used where we don’t have a numeric rating but just a boolean value like a product being bought or an add being clicked (or Tanimoto Coefficient)(AB / ( A + B - AB))
+
+'''
+    from math import*
+    def jaccard_similarity(x,y):
+
+        intersection_cardinality = len(set.intersection(*[set(x), set(y)]))
+        union_cardinality = len(set.union(*[set(x), set(y)]))
+    return intersection_cardinality/float(union_cardinality)
+''' from http://dataconomy.com/2015/04/implementing-the-five-most-popular-similarity-measures-in-python/
+
     *Cosine - maybe use clicked books as a different rating, and recommended but not clicked as another rating
     Pearson
 - Graphlab Create library
 
-DATA
+DATA - EDA
 - total data points: 29,591,800
     + total 'succes_page' data points: 29,427,335
     + total 'individual_email' data points: 164,465
