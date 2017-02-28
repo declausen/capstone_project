@@ -91,3 +91,4 @@ ENV/
 # Unnecessary Project files
 project/
 data/
+metastore_db/
