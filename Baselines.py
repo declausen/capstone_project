@@ -47,10 +47,10 @@ class Baseline(object):
     def rmse(self, test_data):
         """Calculate root mean squared error for predictions on test data."""
         return rmse(test_data, self.predicted)
-    
+
     def __str__(self):
         return split_title(self.__class__.__name__)
-        
+
 # Implement the 3 baselines.
 class UniformRandomBaseline(Baseline):
     """Fill missing values with uniform random values."""
@@ -58,7 +58,7 @@ class UniformRandomBaseline(Baseline):
     def predict(self, train_data):
         nan_mask = np.isnan(train_data)
         masked_train = np.ma.masked_array(train_data, nan_mask)
-        pmin, pmax = masked_train.min(), masked_train.max()
+        pmin, pmax = 0, 1#masked_train.min(), masked_train.max()
         N = nan_mask.sum()
         train_data[nan_mask] = np.random.uniform(pmin, pmax, N)
         self.predicted = train_data
@@ -69,7 +69,7 @@ class GlobalMeanBaseline(Baseline):
 
     def predict(self, train_data):
         nan_mask = np.isnan(train_data)
-        train_data[nan_mask] = train_data[~nan_mask].mean()
+        train_data[nan_mask] = 0.096#train_data[~nan_mask].mean()
         self.predicted = train_data
 
 
@@ -98,22 +98,20 @@ if __name__ == "__main__":
     baseline_methods = OrderedDict()
     baseline_methods['ur'] = UniformRandomBaseline
     baseline_methods['gm'] = GlobalMeanBaseline
-    baseline_methods['mom'] = MeanOfMeansBaseline
+    # baseline_methods['mom'] = MeanOfMeansBaseline
 
-    R = np.random.randint(-10,10,1000).astype('float')
+    R = np.random.randint(0,2,100).astype('float')
     test = R
-    
-    train = R.copy()
-    train[np.random.randint(0,1000,50)] = np.nan
 
-    train = train.reshape(100,10)
-    test = test.reshape(100,10)
-    
+    train = R.copy()
+    train[np.arange(0,100)] = np.nan
+
+    train = train.reshape(1,100)
+    test = test.reshape(1,100)
+
     baselines = {}
     for name in baseline_methods:
         Method = baseline_methods[name]
         method = Method(train)
         baselines[name] = method.rmse(test)
         print('%s RMSE:\t%.5f' % (method, baselines[name]))
-    
-    
