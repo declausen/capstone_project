@@ -90,7 +90,7 @@ def test_model(train_RDD, validate_RDD, validate_for_predict_RDD):
     seed = 5L
     iterations = 20
     regularization_parameter = 0.1
-    ranks = [10, 20, 14]
+    ranks = [14]#10, 20, 14]
     errors = [0, 0, 0]
     reg_met = [0, 0, 0]
     err = 0
@@ -99,7 +99,7 @@ def test_model(train_RDD, validate_RDD, validate_for_predict_RDD):
     best_rank = -1
     best_iteration = -1
     for rank in ranks:
-        model = ALS.train(train_RDD, rank=rank, seed=seed, iterations=iterations, lambda_=regularization_parameter)
+        model = ALS.train(train_RDD, rank=rank, seed=seed, iterations=iterations, lambda_=regularization_parameter, nonnegative=True)
         # model = ALS.trainImplicit(train_RDD, rank=rank, seed=seed, iterations=iterations, lambda_=regularization_parameter)
         predictions = model.predictAll(validate_for_predict_RDD).map(lambda r: ((r[0], r[1]), r[2]))
 
@@ -121,7 +121,7 @@ def test_model(train_RDD, validate_RDD, validate_for_predict_RDD):
 if __name__ == '__main__':
     spark = ps.sql.SparkSession.builder \
                 .master("local[4]") \
-                .appName("building recommender") \
+                .appName("test") \
                 .getOrCreate()
 
     sc = spark.sparkContext
@@ -138,28 +138,3 @@ if __name__ == '__main__':
     # test_model(train_RDD_neg1, validate_RDD_neg1, validate_for_predict_RDD_neg1)
 
     # check_type_and_take_3(train_RDD)
-
-    # baseline_methods = OrderedDict()
-    # baseline_methods['ur'] = UniformRandomBaseline
-    # baseline_methods['gm'] = GlobalMeanBaseline
-    # baseline_methods['mom'] = MeanOfMeansBaseline
-    #
-    # R = np.random.randint(-10,10,1000).astype('float')
-    # test = R
-    #
-    # train = R.copy()
-    # train[np.random.randint(0,1000,50)] = np.nan
-    #
-    # train = train.reshape(100,10)
-    # test = test.reshape(100,10)
-    #
-    # pd_df = pd.read_table("data/subset.csv", sep=',')
-    # # pd_df_matrix = create_matrix(pd_df)
-    # # np.asarray(pd_df_matrix.todense())
-    #
-    # baselines = {}
-    # for name in baseline_methods:
-    #     Method = baseline_methods[name]
-    #     method = Method(train)
-    #     baselines[name] = method.rmse(test)
-    #     print('%s RMSE:\t%.5f' % (method, baselines[name]))
