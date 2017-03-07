@@ -4,6 +4,8 @@ https://pymc-devs.github.io/pymc3/notebooks/pmf-pymc.html
 
 from collections import OrderedDict
 import numpy as np
+import graphlab as gl
+# import pandas as pd
 
 # Define our evaluation function.
 def rmse(test_data, predicted):
@@ -69,7 +71,7 @@ class GlobalMeanBaseline(Baseline):
 
     def predict(self, train_data):
         nan_mask = np.isnan(train_data)
-        train_data[nan_mask] = 0.096#train_data[~nan_mask].mean()
+        train_data[nan_mask] = 0.09667#=(28607/295918) #train_data[~nan_mask].mean()
         self.predicted = train_data
 
 
@@ -100,14 +102,36 @@ if __name__ == "__main__":
     baseline_methods['gm'] = GlobalMeanBaseline
     # baseline_methods['mom'] = MeanOfMeansBaseline
 
-    R = np.random.randint(0,2,100).astype('float')
-    test = R
+    # Toy Dataset
+    # R = np.random.randint(0,2,100).astype('float')
+    # test = R
+    #
+    # train = R.copy()
+    # train[np.arange(0,100)] = np.nan
+    #
+    # train = train.reshape(1,100)
+    # test = test.reshape(1,100)
 
-    train = R.copy()
-    train[np.arange(0,100)] = np.nan
+    # Subset
+    sf = gl.SFrame.read_csv('data/subset.csv')
+    sf.remove_columns(['X1',
+                         'id',
+                         'source',
+                         'from_book_id',
+                         'ad_id',
+                         'boost_id',
+                         'clicked',
+                         'optin',
+                         'created_at',
+                         'updated_at'])
+    # no_train, no_test = gl.recommender.util.random_split_by_user(sf, user_id='reader_id', item_id='book_id', random_seed=17)
 
-    train = train.reshape(1,100)
-    test = test.reshape(1,100)
+    test = np.asarray(sf['claimed']).astype('float')
+    train = test.copy()
+    train[np.arange(0, len(test))] = np.nan
+    train = train.reshape(1, len(test))
+    test = test.reshape(1, len(test))
+
 
     baselines = {}
     for name in baseline_methods:

@@ -92,3 +92,7 @@ ENV/
 project/
 data/
 metastore_db/
+
+# Exceed GitHub's file size recommendation (50.00 MB) and/or limit (100.00 MB)
+graphlab_recommender/
+graphlab_recommender_subset/

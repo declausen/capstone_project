@@ -50,12 +50,12 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a style="color:#00cca3" class="navbar-brand page-scroll" href="/">Read A Book</a>
+            <a style="color:#00cca3" class="navbar-brand page-scroll" href="/">Back To Homepage</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a style="color:#00cca3" class="navbar-brand page-scroll" href="#contact">Contact</a>
+                    <a style="color:#330099" class="navbar-brand page-scroll" href="/#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
 <br>
 <div class="section">
     <div class="row">
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
             <h2>Recommended Books</h2>
         </div>
     </div>
@@ -73,7 +73,56 @@
         {% for book in booklist %}
         <h3>{{book}}</h3>
         {% endfor %}
-    </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+           <div class="col-lg-12 text-center">
+               <h2 class="section-heading">Recommended Books</h2>
+               <hr class="primary">
+            </div>
+       </div>
+            <table class="table" id="recommendations-table">
+                <tr>
+                    <th id='recommendations-table'>Title</th>
+                    <th id='recommendations-table'>Genre</th>
+                    <th id='recommendations-table'>Genre 2</th>
+                    <!-- <th id='recommendations-table'>Elevation Gain (ft)</th> -->
+                  </tr>
+                     {% for book in booklist %}
+                  <tr>
+                      <td>{{book[0]}}</td>
+                      <td>{{book[1]}}</td>
+                      <td>{{book[2]}}</td>
+                   </tr>
+                     {% endfor %}
+             </table>
+      <!-- <a href="/reader_id" class="btn btn-primary btn-xl page-scroll">Enter Another Reader Id</a> -->
+      </div>
+      <div class="container">
+        <div class="row">
+             <div class="col-lg-12 text-center">
+                 <h2 class="section-heading">Previously Read Books</h2>
+                 <hr class="primary">
+              </div>
+         </div>
+              <table class="table" id="recommendations-table">
+                  <tr>
+                      <th id='read-table'>Title</th>
+                      <th id='read-table'>Genre</th>
+                      <th id='read-table'>Genre 2</th>
+                      <!-- <th id='recommendations-table'>Elevation Gain (ft)</th> -->
+                    </tr>
+                       {% for read in readlist %}
+                    <tr>
+                        <td>{{read[0]}}</td>
+                        <td>{{read[1]}}</td>
+                        <td>{{read[2]}}</td>
+                     </tr>
+                       {% endfor %}
+               </table>
+        <a href="/reader_id" class="btn btn-primary btn-xl page-scroll">Enter Another Reader Id</a>
+        </div>
+  </div>
 </div>
 
 
