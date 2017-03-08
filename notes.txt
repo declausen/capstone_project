@@ -32,3 +32,27 @@ DATA - EDA
 - total clicked: 3,106,707                  percent: 10.499%
 - total clicked but not claimed: 297,857    percent: 1.007%
 - total optin: 1,585,696                    percent: 5.359%
+
+
+EXAMPLES
+122777 - pretty good
+74850 - recommends erotica to teen
+255737 - a lot of romance
+451521 - pretty good
+523754 - pretty good
+17224 - pretty good a lot of romance
+1317
+238527
+297659
+338566
+215746 - great
+30808 - really good (paranormal and romance)
+214829 - good
+485986 - good example of one
+
+BAD EXAMPLE
+355603
+551904 - causes error
+143366 - causes error
+499564 - causes error
+366969 - causes error

@@ -5,8 +5,9 @@ import cPickle as pickle
 
 
 def create_train_save_model(sf):
-    model = gl.recommender.factorization_recommender.create(sf, user_id='reader_id', item_id='book_id', target='claimed', num_factors=36, solver='als', regularization=0.01, random_seed=17)
-    model.save('web_app/graphlab_recommender')
+    # model = gl.recommender.factorization_recommender.create(sf, user_id='reader_id', item_id='book_id', target='claimed', num_factors=36, solver='als', regularization=0.01, random_seed=17)
+    model = gl.recommender.factorization_recommender.create(sf, user_id='reader_id', item_id='book_id', target='claimed', solver='als', random_seed=17)
+    model.save('web_app/graphlab_recommender_basic')
 
 
 if __name__ == '__main__':

@@ -7,8 +7,7 @@ import graphlab as gl
 app = Flask(__name__)
 
 def remove_columns_from_recommend_log(sf):
-    sf.remove_columns(['X1',
-                         'id',
+    sf.remove_columns(['id',
                          'source',
                          'from_book_id',
                          'ad_id',
@@ -21,14 +20,20 @@ def remove_columns_from_recommend_log(sf):
 
 def get_titles_from_book_ids(book_ids_list, library):
     titles_list = []
-    for book in book_ids_list:
-        titles_list.append([library[library['id'] == book][0]['title'], library[library['id'] == book][0]['genre_id'], library[library['id'] == book][0]['genre_id_2']])
+    if len(book_ids_list) <= 10:
+        for book in book_ids_list:
+            titles_list.append([library[library['id'] == book][0]['title'], library[library['id'] == book][0]['genre_id'], library[library['id'] == book][0]['genre_id_2']])
+    else:
+        for book in book_ids_list[:10]:
+            titles_list.append([library[library['id'] == book][0]['title'], library[library['id'] == book][0]['genre_id'], library[library['id'] == book][0]['genre_id_2']])
     return titles_list
 
 def get_genre_from_id(titles_list, genres):
     titles_with_genres_list = []
     for title in titles_list:
-        if title[2] == None:
+        if title[1] == None:
+            titles_with_genres_list.append([title[0], None, None])
+        elif title[2] == None:
             titles_with_genres_list.append([title[0], genres[genres['id'] == title[1]][0]['genre'], None])
         else:
             titles_with_genres_list.append([title[0], genres[genres['id'] == title[1]][0]['genre'], genres[genres['id'] == title[2]][0]['genre']])
@@ -60,9 +65,10 @@ def display_recommendations():
 
 
 if __name__ == '__main__':
-    model = gl.load_model('graphlab_recommender_subset')
+    # model = gl.load_model('graphlab_recommender')
+    model = gl.load_model('graphlab_recommender_basic')
     library = gl.SFrame.read_csv('../data/books_information.csv').remove_column('X1')
     genres = gl.SFrame.read_csv('../data/instafreebie2-21-17_genres.csv')
-    rec_log = gl.SFrame.read_csv('../data/subset.csv')
+    rec_log = gl.SFrame.read_csv('../data/instafreebie2-21-17_recommend_log.csv')
     recommend_log = remove_columns_from_recommend_log(rec_log)
     app.run(host='0.0.0.0', port=8082, debug=True, threaded=True)
