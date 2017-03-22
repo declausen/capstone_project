@@ -1,12 +1,14 @@
-# instaFreebie Book Recommender
+# InstaBookRec - A Book Recommendation Algorithm for the Company Instafreebie Book Recommender
 
 ## Purpose
 
 I am collaborating with the company instaFreebie to improve their book recommending algorithm.  I am planning to use collaborative filtering based on item-item similarity.  It has also come to my attention that my data is implicit (reccommended, clicked, downloaded) rather than explicit (user ratings of the books).
 
-## Similar Past Projects
+## Similar Past Galvanize Projects
 
 * Sal Khan - [Electronic Music Recommender](https://github.com/salmank09/musicrecommender)
+* Olivia Schow - [Take-A-Hike: A Colorado Trail Recommender](https://github.com/oschow/take-a-hike)
+
 
 ## Online Resources
 
