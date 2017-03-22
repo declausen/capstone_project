@@ -1,4 +1,5 @@
-# InstaBookRec - A Book Recommendation Algorithm for the Company Instafreebie Book Recommender
+# InstaBookRec  
+### A Book Recommendation Algorithm for the Company Instafreebie
 
 ## Purpose
 
