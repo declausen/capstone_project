@@ -1,41 +1,68 @@
 # InstaBookRec  
+
+<img src="images/break_line.png">
+
 ### A Book Recommendation Algorithm for the Company Instafreebie
+Galvanize Data Science Immersive - Capstone Project - March 2017
+
+### David E Clausen
+Data Scientist | Mathematician
+
+<img src="images/break_line.png">
 
 ## Table of Contents
-- [Purpose](#Purpose)
-- [Overview](#workflow)
-- [The Data](#the-data)
-- [Visualization](#visualization)
-- [Engineered Features](#engineered-features)
-- [K-Means Clustering](#k-means-clustering)
-- [What Does it Mean?](#what-does-it-mean?)
-- [Business Insight](#business-insight)
+- [Purpose](#purpose)
+- [Overview](#overview)
+- [Data](#data)
+- [Models](#models)
+- [Deployment](#deployment)
 - [About Me](#about-me)
 - [Resources](#resources)
 
+<img src="images/break_line.png">
+
 ## Purpose
 
-I collaborated with the company instaFreebie to improve their book recommending algorithm.  I am planning to use collaborative filtering based on .  It has also come to my attention that my data is implicit (reccommended, clicked, downloaded) rather than explicit (user ratings of the books).
+I became a data scienctist because I believe in harnessing the power of computers to derive actionable insights from data in order to make more informed business decisions. I seek to fully utilize my abilities in order to be a useful and effective member of a company.  This is why I decided to work with a company for my capstone project at [Galvanize](http://www.galvanize.com)
+
+in order to help I collaborated with the company [Instafreebie](https://www.instafreebie.com) to improve their book recommendation algorithm.  
+
+
+I used collaborative filtering based on .  It has also come to my attention that my data is implicit (reccommended, clicked, downloaded) rather than explicit (user ratings of the books).
+
+<img src="images/break_line.png">
 
 ## Overview
 
-## The Data
+<img src="images/break_line.png">
 
-## Model
+## Data
+
+<img src="images/break_line.png">
+
+## Models
+
+<img src="images/break_line.png">
 
 ## Deployment
 
+<img src="images/break_line.png">
+
 ## About Me
+<div style="text-align:center"><img src="images/IMG_1968_square.PNG" width=30% height=30%/></div>
+
+
+<img src="images/break_line.png">
 
 ## Resources
 
-### Similar Past Galvanize Projects
+#### Similar Past Galvanize Capstone Projects
 
 * Sal Khan - [Electronic Music Recommender](https://github.com/salmank09/musicrecommender)
 * Olivia Schow - [Take-A-Hike: A Colorado Trail Recommender](https://github.com/oschow/take-a-hike)
 
 
-### Online
+#### Online
 
 * Analytics Vidhya (uses GraphLab Create) - [Quick Guide to Build a Recommendation Engine in Python](https://www.analyticsvidhya.com/blog/2016/06/quick-guide-build-recommendation-engine-python/)
 * Turi-code (uses GraphLab Create) - [Movie Recommender Sample Project](https://github.com/turi-code/sample-movie-recommender)
