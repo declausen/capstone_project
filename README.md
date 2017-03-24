@@ -25,7 +25,7 @@ Data Scientist | Mathematician
 
 I became a data scienctist because I believe in harnessing the power of computers to derive actionable insights from data in order to make more informed business decisions.  I seek to fully utilize my abilities as a data scientist and mathematician in order to be a useful and effective member of a company.  This is why I decided to work with a company for my capstone project at [Galvanize](http://www.galvanize.com).  
 
-For my project I collaborated with the company [Instafreebie](https://www.instafreebie.com).  Instafreebie connects authors with the right readers by enabling authors to share portions of their work in exchange for email sign ups. 
+For my project I collaborated with the company [Instafreebie](https://www.instafreebie.com).  Instafreebie connects authors with the right readers by enabling authors to share portions of their work in exchange for email sign ups.
 
 
 I used collaborative filtering based on .  It has also come to my attention that my data is implicit (reccommended, clicked, downloaded) rather than explicit (user ratings of the books).
@@ -49,7 +49,7 @@ I used collaborative filtering based on .  It has also come to my attention that
 <img src="images/break_line.png">
 
 ## About Me
-<div style="text-align:center"><img src="images/IMG_1968_square.PNG" width=30% height=30%/></div>
+<div style="text-align:center"><img align="middle" src="images/IMG_1968_square.PNG" width=30% height=30%/></div>
 
 
 <img src="images/break_line.png">
