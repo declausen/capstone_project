@@ -49,7 +49,7 @@ I used collaborative filtering based on .  It has also come to my attention that
 <img src="images/break_line.png">
 
 ## About Me
-<div style="text-align:center"><img align="middle" src="images/IMG_1968_square.PNG" width=30% height=30%/></div>
+<div style="text-align:center"><img align="center" src="images/IMG_1968_square.PNG" width=30% height=30%/></div>
 
 
 <img src="images/break_line.png">
