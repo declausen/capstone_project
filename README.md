@@ -60,11 +60,10 @@ Content-based Filtering
 ## Data
 Instafreebie gave me access to tables on their MySQL database.  The table with the most relevant information was a log of previously made recommendations.  There were 29,591,800 recommendations to 508,163 readers spanning 10,078 books.
 
+###### Figure 1: The Distribution of Books between Genres
 <div style="text-align:center">
 <img src="images/genre_graph.png" width=75% height=75%/>
 </div><br>
-
-![image](images/genre_graph.png)
 
 There were 32 genres represented in the ten thousand books, but nearly one third of the books were from the genre of Romance.  This is significant because it was important that the recommender I built did more than just suggest books from the same genre as the book that was downloaded, otherwise it would likely perform similarly to the company's current algorithm. Also, with Romance dominating the genre distribution, it could propose a challenge to suggest books from other genres.
 
@@ -76,6 +75,11 @@ This log also kept track of whether or not the recommendations were downloaded b
 ## Models
 Spark and GraphLab
 
+###### Figure 2: Matrix Facotrization
+<div style="text-align:center">
+<img src="images/matrix_factorization.png" width=75% height=75%>
+</div><br>
+
 I utilized the alternating least squares (ALS) algorithm in GraphLab Create and Spark to construct two different model-based collaborative filtering recommender systems.  
 
 Performance
@@ -85,9 +89,16 @@ Performance
 ## Deployment
 Web App
 
+<img src="images/homepage.png" width=75% height=75%>
 
+<img src="images/enter_id.png" width=75% height=75%>
 
-Add screenshots
+<img src="images/example1.png" width=75% height=75%>
+
+<img src="images/example1_results.png" width=75% height=75%>
+
+<img src="images/example2_results.png" width=75% height=75%>
+
 
 <img src="images/break_line.png">
 
@@ -95,8 +106,6 @@ Add screenshots
 <div style="text-align:center">
 <img src="images/headshot_square.PNG" width=30% height=30%/>
 </div><br>
-
-![image](images/headshot_square.PNG)
 
 I am a Data Scientist living in Denver, Colorado. I believe in harnessing the power of computers to derive actionable insights from data in order to make more informed business decisions.
 
