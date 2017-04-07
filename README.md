@@ -1,6 +1,6 @@
 # InstaBookRec  
 
-<img src="images/break_line.png">
+<!-- <img src="images/break_line.png"> -->
 
 ### A Book Recommendation Algorithm for the Company Instafreebie
 Galvanize Data Science Immersive - Capstone Project - March 2017
@@ -60,6 +60,12 @@ Content-based Filtering
 ## Data
 Instafreebie gave me access to tables on their MySQL database.  The table with the most relevant information was a log of previously made recommendations.  There were 29,591,800 recommendations to 508,163 readers spanning 10,078 books.
 
+<div style="text-align:center">
+<img src="images/genre_graph.png" width=75% height=75%/>
+</div><br>
+
+![image](images/genre_graph.png)
+
 There were 32 genres represented in the ten thousand books, but nearly one third of the books were from the genre of Romance.  This is significant because it was important that the recommender I built did more than just suggest books from the same genre as the book that was downloaded, otherwise it would likely perform similarly to the company's current algorithm. Also, with Romance dominating the genre distribution, it could propose a challenge to suggest books from other genres.
 
 This log also kept track of whether or not the recommendations were downloaded by the users.  This type of data is implicit rather than explicit.  Implicit data is an observed behavior of a user towards an item and is typically binary (i.e. downloaded or not downloaded, clicked on or not clicked on), as opposed to explicit data, which is a conscious rating of an item by a user and is usually on some kind of a scale (i.e. 0 to 5 stars, or 1 to 10).
@@ -79,14 +85,18 @@ Performance
 ## Deployment
 Web App
 
+
+
 Add screenshots
 
 <img src="images/break_line.png">
 
 ## About Me
 <div style="text-align:center">
-<img src="images/IMG_1968_square.PNG" width=30% height=30%/>
+<img src="images/headshot_square.PNG" width=30% height=30%/>
 </div><br>
+
+![image](images/headshot_square.PNG)
 
 I am a Data Scientist living in Denver, Colorado. I believe in harnessing the power of computers to derive actionable insights from data in order to make more informed business decisions.
 
