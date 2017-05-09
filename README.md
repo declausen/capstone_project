@@ -42,7 +42,8 @@ My task was to create a recommendation algorithm that would result in more downl
 <img src="images/break_line.png">
 
 ## Recommendation Systems
-Intro
+Introduction
+Recommendation systems have become increasingly more popular in recent years as a way to increase business.  Netflix, Pandora and Amazon are just a few examples of companies that use a well defined process to make suggestions to costumers about new movies/television shows, songs/artists and the plethora of products sold on Amazon.  In a broad sense, recommendation systems predict the level of interest a user has in a new item.
 
 Collaborative Filtering
 - Memory-based
@@ -77,7 +78,7 @@ Spark and GraphLab
 
 ###### Figure 2: Matrix Facotrization
 <div style="text-align:center">
-<img src="images/matrix_factorization.png" width=75% height=75%>
+<img src="images/matrix_factorization.png">
 </div><br>
 
 I utilized the alternating least squares (ALS) algorithm in GraphLab Create and Spark to construct two different model-based collaborative filtering recommender systems.  
