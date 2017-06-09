@@ -35,20 +35,29 @@ DATA - EDA
 
 
 EXAMPLES
+214829 - good
+485986 - good example of one
+30808 - really good (paranormal and romance)
+17224 - pretty good a lot of romance
+
 122777 - pretty good
 74850 - recommends erotica to teen
 255737 - a lot of romance
 451521 - pretty good
 523754 - pretty good
-17224 - pretty good a lot of romance
 1317
 238527
 297659
 338566
 215746 - great
-30808 - really good (paranormal and romance)
-214829 - good
-485986 - good example of one
+215746
+444626
+197423
+499261
+
+835
+826
+845
 
 BAD EXAMPLE
 355603

@@ -43,7 +43,7 @@ My task was to create a recommendation algorithm that would result in more downl
 
 ## Recommendation Systems
 Introduction
-Recommendation systems have become increasingly more popular in recent years as a way to increase business.  Netflix, Pandora and Amazon are just a few examples of companies that use a well defined process to make suggestions to costumers about new movies/television shows, songs/artists and the plethora of products sold on Amazon.  In a broad sense, recommendation systems predict the level of interest a user has in a new item.
+Recommendation systems have become increasingly more popular in recent years as a way to increase business.  Netflix, Pandora and Amazon are just a few examples of companies that use a well defined process to make suggestions to consumers about new movies/television shows, songs/artists and products being sold.  In a broad sense, recommendation systems predict the level of interest a user has in a new item.
 
 Collaborative Filtering
 - Memory-based
