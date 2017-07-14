@@ -102,22 +102,22 @@ I created a web app in order to interface with my GraphLab recommender system.  
 <img src="images/homepage.png" width=90% height=90%>
 <br>
 This is the homepage.
-
+<br>
 
 <img src="images/example1.png" width=90% height=90%>
 <br>
 Enter a reader ID in order to receive recommendations for a specific reader.
-
+<br>
 
 <img src="images/example1_results.png" width=90% height=90%>
 <br>
 This page displays five recommended books, as well as up to ten previously read books.  The books are posted along with their primary and secondary genres.  This example illustrates how the algorithm was able to recommend all the genres in the previously read books and in similar proportions.
-
+<br>
 
 <img src="images/example2_results.png" width=90% height=90%>
 <br>
 These are recommendations for another reader.  This example demonstrates how  with only one previously read book, my recommender was able to correctly recommend another thriller as the top suggestion, and also branch out to other genres.  When there is limited information about the user, it can be difficult to make good recommendations.
-
+<br>
 
 Thank you for your interest in my project.  Please feel free to contact me with any questions, concerns or comments.
 
